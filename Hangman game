@@ -1,0 +1,19 @@
+from string import ascii_lowercase
+num_attempts = 0
+def get_num_attempts():
+	while True:
+		num_attempts = input('How many incorrect attempts would you like? Please enter an integer between 1 and 25:')
+		try:
+			num_attempts = int(num_attempts)
+			if 1 <= num_attempts <= 25:
+				print(num_attempts)
+				return num_attempts
+			else:
+				print('{0} is not between 1 and 25'.format(num_attempts))
+		except ValueError:
+			print('{0} is not an integer between 1 and 25'.format(num_attempts))
+			
+"""def get_random_word(max_word_length):"""
+	
+get_num_attempts()
+print(num_attempts)
